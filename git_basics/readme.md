@@ -1,1 +1,1 @@
-"Learning how to use git"
+"Hello GIT"
