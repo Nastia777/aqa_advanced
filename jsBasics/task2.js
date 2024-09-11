@@ -4,6 +4,6 @@ let congratulation = "Congratulations" + " " + name1 + " and " + name2 + "!";
 
 console.log(congratulation);
 
-    let templateString = `Congratulations ${name1} and ${name2}!`;
+let templateString = `Congratulations ${name1} and ${name2}!`; 
 
 console.log(templateString);
