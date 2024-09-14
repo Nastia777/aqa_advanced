@@ -15,6 +15,3 @@ else if (averageGrade <= 90) {
 else if (averageGrade <= 100) {
     console.log("Відмінно");
 }
-else {
-    console.log("Невалідне число");
-}
