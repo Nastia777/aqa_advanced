@@ -1,4 +1,5 @@
-export default class Book {
+export class Book {
+
     constructor(title, author, year) {
         this._title = title;
         this._author = author;
@@ -6,7 +7,9 @@ export default class Book {
     }
 
     printInfo() {
-        console.log(`Title: "${this._title}", author: ${this._author}, year: ${this._year}.`);
+        console.log(`Title: "${this._title}".`);
+        console.log(`Author: ${this._author}.`);
+        console.log(`Year: ${this._year}.`)
     }
 
     get title() {
@@ -29,7 +32,14 @@ export default class Book {
         this._year = value;
     }
 
-    // static sortByYear(...arg) {
-    //     for ()
-    // }
+    static getOldestBook(books) {
+        let oldestBook = books[0];
+        for (let i = 1; i < books.length; i++) {
+            const currentBook =  books[i];
+            if (currentBook.year < oldestBook.year) {
+                oldestBook = books[i];
+            }
+        }
+        return oldestBook;
+    }
 }

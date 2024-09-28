@@ -1,13 +1,15 @@
-import Book from "./Book.js";
+import { Book } from "./Book.js";
 
-export default class EBook extends Book {
+export class EBook extends Book {
     constructor(title, author, year, format) {
         super(title, author, year);
         this._format = format;
     }
 
     printInfo() {
-        console.log(`Title: "${this._title}", author: ${this._author}, year: ${this._year}, format: ${this._format}.`);
+        //console.log(`Title: "${this._title}", author: ${this._author}, year: ${this._year}, format: ${this._format}.`);
+        super.printInfo();
+        console.log(`Format: ${this._format}.`);
     }
 
     get format() {
@@ -21,4 +23,9 @@ export default class EBook extends Book {
         }
         this._format = value;
     }
+
+    static createEBook(book, format){
+        const eBook = new EBook (book.title, book.author, book.year, format);
+        return eBook;
+    }  
 }
